@@ -2,7 +2,7 @@
 #require 'active_support/concern'
 
 module CommandLineHelper
-  module Helper
+  class Base
     # Provides:
     #     * Requires on options_possible to be defined and return an array of the form:
     #       [ ['--option', '-o', GetoptLong::OPTION_TYPE, 'Helpful message'], ... ]
@@ -23,6 +23,10 @@ Usage: #{program_name} [options]
 #{option_details}
 #{version_info}
       EOH
+    end
+
+    def options_possible
+      raise %{Must override this with something like [ ['--option', '-o', GetoptLong::OPTION_TYPE, 'Helpful message'], ... ]}
     end
 
     def program_name

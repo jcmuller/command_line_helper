@@ -1,14 +1,12 @@
 require 'spec_helper'
 
-class CommandLineHelperHelperSpec
-  include CommandLineHelper::Helper
-
+class CommandLineHelperHelperSpec < CommandLineHelper::Base
   def options_possible
     [ ['--blah', '-b', GetoptLong::NO_ARGUMENT, 'Helpful!' ] ]
   end
 end
 
-describe CommandLineHelper::Helper do
+describe CommandLineHelper::Base do
   subject { CommandLineHelperHelperSpec.new }
 
   describe "#help_info" do
