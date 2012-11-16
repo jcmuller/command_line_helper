@@ -1,16 +1,16 @@
 # TODO Check for definition of options_possible
-#require 'active_support/concern'
+require 'active_support/concern'
 
 module CommandLineHelper
   # Depends on:
   # * version_info (simply defined to return __PACKAGE__::VERSION)
   # * options_possible
   #     [ ['--option', '-o', GetoptLong::OPTION_TYPE, 'Helpful message'], ... ]
-  class Base
-    class << self
-      def program_name
-        @program_name = File.basename($0)
-      end
+  module Help
+    extend ActiveSupport::Concern
+
+    included do
+      include CommandLineHelper::ProgramName
     end
 
     # Help information that is constructed from the options_possible defined
@@ -29,10 +29,6 @@ Usage: #{program_name} [options]
 
     def version_info
       VERSION
-    end
-
-    def program_name
-      self.class.program_name
     end
 
     private
