@@ -1,6 +1,12 @@
 require 'spec_helper'
 
-describe CommandLineHelper::Base do
+class HelpTextClass
+  include CommandLineHelper::HelpText
+end
+
+describe CommandLineHelper::HelpText do
+  subject { HelpTextClass.new }
+
   it { expect{ subject.help_info }.to raise_error }
 
   context do
@@ -8,20 +14,6 @@ describe CommandLineHelper::Base do
       subject.stub(:options_possible).and_return(
         [ ['--foo', '-f', 1, 'Fooism'], ['--bar', '-b', 2, 'Bark'] ]
       )
-    end
-
-    describe "#program_name" do
-      it { subject.program_name.should == "rspec" }
-
-      it {
-        described_class.should_receive(:program_name)
-        subject.program_name
-      }
-
-      it {
-        subject.program_name
-        described_class.instance_variable_get(:"@program_name").should == "rspec"
-      }
     end
 
     describe "#help_info" do
