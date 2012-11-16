@@ -8,9 +8,10 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{This library provides a module that helps with some common CLI tasks (mainly showing help texts and options)}
   gem.homepage      = ""
 
-  gem.files         = `git ls-files`.split($\)
+  gem.files         = Dir["lib/**/*"] +
+    %w(command_line_helper.gemspec Gemfile LICENSE Rakefile README.md)
   gem.executables   = []
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.test_files    = Dir["spec/**/*"]
   gem.name          = "command_line_helper"
   gem.require_paths = ["lib"]
   gem.version       = CommandLineHelper::VERSION
