@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jcmuller@gmail.com"]
   gem.description   = %q{Helper for CLI apps.}
   gem.summary       = %q{This library provides a module that helps with some common CLI tasks (mainly showing help texts and options)}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/jcmuller/command_line_helper"
 
   gem.files         = Dir["lib/**/*"] +
     %w(command_line_helper.gemspec Gemfile LICENSE Rakefile README.md)
