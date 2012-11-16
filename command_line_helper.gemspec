@@ -15,4 +15,6 @@ Gem::Specification.new do |gem|
   gem.name          = "command_line_helper"
   gem.require_paths = ["lib"]
   gem.version       = CommandLineHelper::VERSION
+
+  gem.add_dependency("activesupport")
 end
