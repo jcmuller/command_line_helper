@@ -6,7 +6,7 @@ module CommandLineHelper
   # * version_info (simply defined to return __PACKAGE__::VERSION)
   # * options_possible
   #     [ ['--option', '-o', GetoptLong::OPTION_TYPE, 'Helpful message'], ... ]
-  module Help
+  module HelpText
     extend ActiveSupport::Concern
 
     included do
