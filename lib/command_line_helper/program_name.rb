@@ -1,6 +1,3 @@
-# TODO Check for definition of options_possible
-require 'active_support/concern'
-
 module CommandLineHelper
   module ProgramName
 
