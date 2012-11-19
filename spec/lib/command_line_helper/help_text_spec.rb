@@ -37,7 +37,7 @@ Usage: program_name [options]
     --foo, -f   Fooism
     --bar, -b   Bark
 
-0.0.1
+#{CommandLineHelper::VERSION}
         EOH
       end
     end
