@@ -1,4 +1,8 @@
 # CommandLineHelper
+[![Build Status](https://secure.travis-ci.org/jcmuller/command_line_helper.png?branch=master)](http://travis-ci.org/jcmuller/command_line_helper)
+[![Dependency Status](https://gemnasium.com/jcmuller/command_line_helper.png "Dependency Status")](https://gemnasium.com/jcmuller/command_line_helper)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/jcmuller/command_line_helper)
+
 
 This helps other gems with their common CLI chores.
 
