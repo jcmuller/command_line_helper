@@ -2,7 +2,7 @@
 [![Build Status](https://secure.travis-ci.org/jcmuller/command_line_helper.png?branch=master)](http://travis-ci.org/jcmuller/command_line_helper)
 [![Dependency Status](https://gemnasium.com/jcmuller/command_line_helper.png "Dependency Status")](https://gemnasium.com/jcmuller/command_line_helper)
 [![Code Climate](https://codeclimate.com/github/jcmuller/command_line_helper.png)](https://codeclimate.com/github/jcmuller/command_line_helper)
-
+[![Coverage Status](https://coveralls.io/repos/jcmuller/command_line_helper/badge.png?branch=master)](https://coveralls.io/r/jcmuller/command_line_helper)
 
 This helps other gems with their common CLI chores.
 
